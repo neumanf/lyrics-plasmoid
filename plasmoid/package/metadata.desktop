@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Lyrics
+Comment=A widget to fetch lyrics directly to your desktop.
+
+Type=Service
+Icon=amarok_lyrics
+X-KDE-ServiceTypes=Plasma/Applet
+
+X-Plasma-API=declarativeappletscript
+X-Plasma-MainScript=ui/main.qml
+
+X-KDE-PluginInfo-Author=neumanf
+X-KDE-PluginInfo-Email=guiYhmmoNshpDGAUr6@protonmail.com
+X-KDE-PluginInfo-Name=com.github.neumanf.lyrics-plasmoid
+X-KDE-PluginInfo-Version=1
+X-KDE-PluginInfo-Website=https://github.com/neumanf/lyrics-plasmoid
+X-KDE-PluginInfo-Category=System Information
