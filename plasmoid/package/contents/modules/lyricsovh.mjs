@@ -1,19 +1,24 @@
-WorkerScript.onMessage = function(message) {
-    var req = new XMLHttpRequest;
+WorkerScript.onMessage = function (message) {
+    const req = new XMLHttpRequest();
 
-    req.open("GET", "https://api.lyrics.ovh/v1/" + message.artist + "/" + message.song);
-    req.onload = function() {
+    req.open(
+        "GET",
+        `https://api.lyrics.ovh/v1/${message.artist}/${message.song}`
+    );
+
+    req.onload = function () {
         try {
-            var objectArray = JSON.parse(req.responseText);
+            const json = JSON.parse(req.responseText);
 
-            if (objectArray.error !== undefined) {
-                WorkerScript.sendMessage({ 'lyrics': objectArray.error })
+            if (json.error !== undefined) {
+                WorkerScript.sendMessage({ message: json.error });
             } else {
-                WorkerScript.sendMessage({ 'lyrics': objectArray.lyrics })
+                WorkerScript.sendMessage({ message: json.lyrics });
             }
         } catch (e) {
-            WorkerScript.sendMessage({ 'lyrics': "Error: Lyrics not found." })
+            WorkerScript.sendMessage({ message: "Error: Lyrics not found." });
         }
-    }
+    };
+
     req.send();
-}
+};

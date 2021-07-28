@@ -4,12 +4,12 @@ A KDE Plasma Widget that brings lyrics to your desktop.
 
 ### Features
 
--   Search lyrics using [lyrics.ovh](https://lyrics.ovh)
+-   Search lyrics using [lyrics.ovh](https://lyrics.ovh) and [Musixmatch](https://www.musixmatch.com/)
 -   Copy lyrics to system clipboard
 
 ### Usage
 
-<img src="/images/screenshot.png">
+<img src="https://raw.githubusercontent.com/neumanf/neumanf.github.io/main/images/lyrics_plasmoid.png">
 
 ### Installation
 
